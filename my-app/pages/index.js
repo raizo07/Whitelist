@@ -37,7 +37,7 @@ export default function Home() {
 
     // If user is not connected to the sepolia network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
+    if (chainId !== 5) {
       window.alert("Change the network to sepolia");
       throw new Error("Change network to sepolia");
     }
@@ -64,7 +64,7 @@ export default function Home() {
         signer
       );
       // call the addAddressToWhitelist from the contract
-      const tx = await whitelistContract.addAddressesToWhitelist();
+      const tx = await whitelistContract.addAddressToWhitelist();
       setLoading(true);
       // wait for the transaction to get mined
       await tx.wait();
@@ -213,7 +213,7 @@ export default function Home() {
       </div>
 
       <footer className={styles.footer}>
-        Made by GABRIEL with &#10084;
+        Made with &#10084 by GABRIEL ;
       </footer>
     </div>
   );
