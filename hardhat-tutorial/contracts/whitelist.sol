@@ -16,7 +16,7 @@ contract Whitelist {
 
     }
     
-    function addAddressesToWhitelist() public {
+    function addAddressToWhitelist() public {
 // msg.sender is the address of the user who called the function
 
     require(!whitelistedAddresses[msg.sender], "sender already in the whitelist ");
@@ -25,3 +25,4 @@ contract Whitelist {
     numAddressesWhitelisted += 1;
     }
 }
+

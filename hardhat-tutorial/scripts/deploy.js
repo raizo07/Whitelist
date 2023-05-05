@@ -1,4 +1,4 @@
-const {ethers} = require("hardhat")
+const {ethers} = require("hardhat");
 
 async function main() {
     const whitelistContract = await ethers.getContractFactory("Whitelist");
@@ -10,8 +10,7 @@ async function main() {
 
 console.log(
     "Whitelist Contact Address:",
-    deployedWhitelistContract.address
-);
+    deployedWhitelistContract.address);
 }
 
 main()
